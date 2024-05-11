@@ -1,0 +1,79 @@
+.footer {
+  background-color: $colorBlack;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  color: $colorWhite;
+  padding: 30px 0;
+
+  a:not(.logo a, .btn) {
+    position: relative;
+
+    @include before {
+      top: calc(100% + 5px);
+      left: 0;
+      background-color: $colorWhite;
+      width: 100%;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        top: 100%;
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  .logo {
+    width: 46px;
+    height: 50px;
+  }
+
+  .btn {
+    margin-left: auto;
+  }
+}
+
+.footer-menu {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border-top: solid 1px rgba(217, 217, 217, 1);
+  padding-top: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.copyRight {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

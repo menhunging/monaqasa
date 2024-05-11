@@ -1,0 +1,32 @@
+@media (max-width: 479px) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .advantages__item {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .advantages__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .advantages__icon {
+    margin: 0;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 359px) {
+  .header-mobile {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 24px 16px;
+  }
+}
