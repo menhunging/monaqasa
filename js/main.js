@@ -177,21 +177,29 @@ $(document).ready(function () {
   handleLanguage();
 });
 
-const handleLanguage = (lang) => {
+const handleLanguage = () => {
   let langStorage = getTextLang();
 
   $(".lang-change").removeClass("active");
 
-  $(".lang-change").map(function () {
-    if ($(this).attr("data-lang") === langStorage) {
-      $(this).addClass("active");
-    }
-  });
-
   if (langStorage === "en" || langStorage === "ar") {
     setTextLang(langStorage);
+
+    $(".lang-change").map(function () {
+      if ($(this).attr("data-lang") === langStorage) {
+        $(this).addClass("active");
+      }
+    });
   } else {
     setTextLang("en");
+
+    $(".lang-change").removeClass("active");
+
+    $(".lang-change").map(function () {
+      if ($(this).attr("data-lang") === "en") {
+        $(this).addClass("active");
+      }
+    });
   }
 };
 
