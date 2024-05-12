@@ -2723,6 +2723,10 @@ h3,
   .arabic .modal__close {
     left: 25px;
   }
+  .arabic .features-content__right {
+    border-right: 0;
+    padding-right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
