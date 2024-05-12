@@ -2727,6 +2727,10 @@ h3,
     border-right: 0;
     padding-right: 0;
   }
+  .arabic .logo img {
+    left: auto;
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
