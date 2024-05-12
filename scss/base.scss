@@ -1,3 +1,12 @@
+html {
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.load {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: $fontMain;
   background-color: $colorWhite;

@@ -198,6 +198,14 @@ a {
   opacity: 0;
 }
 
+html {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+html.load {
+  opacity: 1;
+}
+
 body {
   font-family: "Gilroy";
   background-color: rgb(255, 255, 255);
@@ -2653,10 +2661,30 @@ h3,
   left: 39px;
   right: auto;
 }
+.arabic .pricing__body ul li::before {
+  left: auto;
+  right: 10px;
+}
+.arabic .reviews-slider__body {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.arabic .reviews-slider__body::before {
+  right: 0;
+  left: auto;
+}
 @media (max-width: 1279px) {
   .arabic .phone-item input {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .arabic .reviews-slider__body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .arabic .reviews-slider__body::before {
+    right: 0;
+    left: auto;
   }
 }
 @media (max-width: 1023px) {
@@ -2675,6 +2703,10 @@ h3,
   }
   .arabic .modal__close {
     left: 25px;
+  }
+  .arabic .pricing__body ul li::before {
+    left: auto;
+    right: 3px;
   }
 }
 @media (max-width: 767px) {

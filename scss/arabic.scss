@@ -52,6 +52,21 @@
     right: auto;
   }
 
+  .pricing__body ul li::before {
+    left: auto;
+    right: 10px;
+  }
+
+  .reviews-slider__body {
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+  .reviews-slider__body::before {
+    right: 0;
+    left: auto;
+  }
+
   @media (max-width: 1439px) {
   }
 
@@ -59,6 +74,16 @@
     .phone-item input {
       padding-left: 20px;
       padding-right: 20px;
+    }
+
+    .reviews-slider__body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .reviews-slider__body::before {
+      right: 0;
+      left: auto;
     }
   }
 
@@ -81,6 +106,11 @@
 
     .modal__close {
       left: 25px;
+    }
+
+    .pricing__body ul li::before {
+      left: auto;
+      right: 3px;
     }
   }
 

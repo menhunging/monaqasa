@@ -201,6 +201,8 @@ const handleLanguage = () => {
       }
     });
   }
+
+  $("html").addClass("load");
 };
 
 const getTextLang = () => {
