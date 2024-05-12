@@ -1,6 +1,7 @@
 i18next.use(i18nextBrowserLanguageDetector).init(
   {
     debug: false,
+    // lng: "en",
     fallbackLng: "en",
     resources: {
       en: {

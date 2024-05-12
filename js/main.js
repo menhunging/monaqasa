@@ -179,7 +179,6 @@ $(document).ready(function () {
 
 const handleLanguage = (lang) => {
   let langStorage = getTextLang();
-  setTextLang(langStorage);
 
   $(".lang-change").removeClass("active");
 
@@ -189,9 +188,10 @@ const handleLanguage = (lang) => {
     }
   });
 
-  if (langStorage === "en") {
+  if (langStorage === "en" || langStorage === "ar") {
+    setTextLang(langStorage);
   } else {
-    console.log("2");
+    setTextLang("en");
   }
 };
 

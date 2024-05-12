@@ -2649,6 +2649,10 @@ h3,
   right: auto;
   left: 17px;
 }
+.arabic .modal__close {
+  left: 39px;
+  right: auto;
+}
 @media (max-width: 1279px) {
   .arabic .phone-item input {
     padding-left: 20px;
@@ -2669,6 +2673,9 @@ h3,
     margin-left: 0;
     margin-right: auto;
   }
+  .arabic .modal__close {
+    left: 25px;
+  }
 }
 @media (max-width: 767px) {
   .arabic .grettings__picture {
@@ -2680,6 +2687,9 @@ h3,
   .arabic .btn--login::before {
     left: 0;
     right: 0;
+  }
+  .arabic .modal__close {
+    left: 25px;
   }
 }
 

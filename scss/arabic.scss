@@ -47,6 +47,11 @@
     left: 17px;
   }
 
+  .modal__close {
+    left: 39px;
+    right: auto;
+  }
+
   @media (max-width: 1439px) {
   }
 
@@ -73,6 +78,10 @@
       margin-left: 0;
       margin-right: auto;
     }
+
+    .modal__close {
+      left: 25px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -87,6 +96,10 @@
     .btn--login::before {
       left: 0;
       right: 0;
+    }
+
+    .modal__close {
+      left: 25px;
     }
   }
 }
