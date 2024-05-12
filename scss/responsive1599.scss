@@ -1,2 +1,6 @@
 @media (max-width: 1599px) {
+  .advantages__list::before {
+    left: auto;
+    right: calc(705px - 536px);
+  }
 }

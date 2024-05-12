@@ -86,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-transform: capitalize;
 
   @include before {
     position: relative;

@@ -256,4 +256,80 @@
   .footer-top .btn {
     margin-left: 0;
   }
+
+  .contacts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .input-item {
+    textarea {
+      height: 160px;
+    }
+  }
+
+  .contacts-form .textarea-item {
+    grid-column: initial;
+    grid-row: initial;
+  }
+
+  .contacts-form {
+    .input-controls {
+      margin-top: 0;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .contacts-info ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .modal-reviews {
+    padding: 16px;
+  }
+
+  .reviews-slider__body::before {
+    width: 16px;
+    height: 13px;
+    background-size: 16px;
+  }
+
+  .modal__close {
+    width: 10px;
+    height: 10px;
+    right: 25px;
+    top: 25px;
+  }
+
+  .modal__container {
+    max-width: 95%;
+  }
+
+  h3,
+  .caption--h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .modal-success {
+    .btn {
+      width: 100%;
+      max-width: 288px;
+    }
+  }
+
+  .grettings__picture::before,
+  .grettings__picture::after {
+    display: none;
+  }
+
+  .advantages__list::before {
+    display: none;
+  }
 }

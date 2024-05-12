@@ -4,12 +4,12 @@
   }
 
   .grettings-text {
-    width: 50%;
+    width: 620px;
     padding-bottom: 42px;
   }
 
   .grettings__picture {
-    width: 50%;
+    width: 620px;
     height: 396px;
 
     img {
@@ -47,5 +47,39 @@
   .swiper-button-prev {
     transform: initial;
     top: calc(100% - 15px);
+  }
+
+  .grettings__picture::before {
+    right: calc(50% + 308px);
+    top: -72px;
+    background-position: right top;
+  }
+
+  .grettings__picture::after {
+    width: 90%;
+    height: 208px;
+    right: calc(50% + 309px);
+    bottom: -80px;
+    background-position: right top;
+  }
+
+  .advantages__list::before {
+    display: none;
+  }
+
+  .grettings__picture {
+    .lines {
+      display: block;
+      position: absolute;
+      left: auto;
+      width: 903px;
+      height: 150px;
+      background-image: url(../img/svg/lines.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      top: calc(100% + 67px);
+      right: calc(50% - 128px);
+      background-size: contain;
+    }
   }
 }

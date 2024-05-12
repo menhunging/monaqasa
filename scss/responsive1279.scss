@@ -220,4 +220,63 @@
     font-size: 10px;
     line-height: 14px;
   }
+
+  .phone-item__phone {
+    display: none;
+  }
+
+  .phone-item {
+    input {
+      padding-left: 20px;
+    }
+  }
+
+  .input-item {
+    label {
+      display: none;
+    }
+  }
+
+  .modal-reviews {
+    padding: 20px;
+  }
+
+  .modal__container {
+    max-width: 440px;
+  }
+
+  .modal-success {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .grettings__picture::before {
+    right: calc(50% + 217px);
+    top: -43px;
+    background-position: right top;
+    width: 80%;
+    background-size: contain;
+  }
+
+  .grettings__picture::after {
+    width: 80%;
+    height: 103px;
+    right: calc(50% + 218px);
+    bottom: -50px;
+  }
+
+  .advantages__list::before {
+    top: -112px;
+    width: 704px;
+    right: calc(50% - 356px);
+    height: 96px;
+    display: block;
+    background-size: contain;
+  }
+
+  .grettings__picture {
+    .lines {
+      display: none;
+    }
+  }
 }

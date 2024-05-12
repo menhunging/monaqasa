@@ -32,6 +32,35 @@
 .grettings__picture {
   width: 705px;
   height: 450px;
+  position: relative;
+
+  .lines {
+    display: none;
+  }
+
+  @include before {
+    background-image: url("../img/svg//line-arrow1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 588px;
+    height: 263px;
+    right: calc(100% - 2px);
+    top: -82px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  @include after {
+    background-image: url("../img/svg//line-arrow2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 571px;
+    height: 274px;
+    right: calc(100% - 1px);
+    bottom: -99px;
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
 .advantages {
@@ -43,6 +72,17 @@
   grid-template-columns: repeat(4, 1fr);
   align-items: flex-start;
   gap: 30px;
+  position: relative;
+
+  @include before {
+    width: 1105px;
+    height: 150px;
+    background-image: url("../img/svg/lines.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: calc(-100% - 56px);
+    left: calc(50% - 553.3px);
+  }
 }
 
 .advantages__item {
@@ -376,4 +416,188 @@
   &::before {
     background-color: $colorGray;
   }
+}
+
+.contacts-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  margin-top: 30px;
+
+  .input-item {
+  }
+
+  .textarea-item {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    grid-column: 1/3;
+  }
+}
+
+.contacts-info {
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  li {
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $colorGreen;
+    }
+  }
+}
+
+.phone-item {
+  input {
+    padding-left: 120px;
+  }
+}
+
+.phone-item__phone {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  min-width: 105px;
+  position: absolute;
+  left: 21px;
+  bottom: 12px;
+  z-index: 5;
+
+  .flag {
+    width: 24px;
+    height: 16px;
+  }
+
+  &.opened {
+    &::before {
+      transform: scale(1, -1);
+    }
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.28998 1.47217L5.07998 5.47217L8.86998 1.47217' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 6px;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+  }
+
+  .code {
+  }
+}
+
+.code-list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 3;
+  padding-top: 15px;
+  transform-origin: top;
+  transform: scale(0);
+  transition: all 0.3s;
+
+  &.opened {
+    transform: scale(1);
+  }
+
+  &__list {
+    box-shadow: 0px 5px 10px 0px rgba(57, 59, 58, 0.2);
+    background-color: $colorWhite;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  a {
+    padding: 10px 15px;
+    display: block;
+
+    &:hover {
+      background-color: $colorGreen;
+      color: $colorWhite;
+    }
+  }
+}
+
+#modal-review {
+}
+
+.modal__container {
+  max-width: 560px;
+  color: $colorBlack;
+
+  .caption {
+    color: $colorBlack;
+  }
+}
+
+.modal-reviews {
+  padding: 30px;
+
+  .reviews-slider__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .reviews-slider__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin-top: 16px;
+
+    &::before {
+      position: relative;
+      top: 0;
+      transform: initial;
+    }
+
+    p {
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+.modal-success {
+  padding: 60px 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
 }

@@ -27,6 +27,12 @@ $(document).ready(function () {
       closeMenu();
     });
 
+    $(".menu a").on("click", function () {
+      if ($(".header-mobile").hasClass("opened")) {
+        $(".header-mobile").removeClass("opened");
+      }
+    });
+
     function closeMenu() {
       burger.removeClass("opened");
       menu.removeClass("opened");
@@ -39,10 +45,10 @@ $(document).ready(function () {
     $(".thisYear").text(date.getFullYear());
   }
 
-  if ($(".phone-input").length > 0) {
-    $(".phone-input").map(function () {
+  if ($(".phone-item").length > 0) {
+    $(".phone-item input").map(function () {
       $(this).inputmask({
-        mask: "+7(999) 999-99-99",
+        mask: "999 99 99",
         placeholder: "*",
         showMaskOnHover: false,
         showMaskOnFocus: true,
@@ -114,6 +120,85 @@ $(document).ready(function () {
       },
     });
   }
+
+  if ($(".code-list").length > 0) {
+    $(".phone-item__phone").on("click", function () {
+      let self = $(this);
+      let codeBlock = self.parents(".phone-item").find(".code-list");
+
+      if (!self.hasClass("opened")) {
+        self.addClass("opened");
+        codeBlock.addClass("opened");
+
+        $(document).mouseup(function (e) {
+          if (!codeBlock.is(e.target) && codeBlock.has(e.target).length === 0) {
+            self.removeClass("opened");
+            codeBlock.removeClass("opened");
+          }
+        });
+      } else {
+        $(document).off("mouseup");
+        self.removeClass("opened");
+        codeBlock.removeClass("opened");
+      }
+    });
+  }
+
+  if ($(".lang-change").length > 0) {
+    let links = $(".lang-change");
+    let body = $("body");
+
+    links.on("click", function (e) {
+      e.preventDefault();
+      let lang = $(this).attr("data-lang");
+
+      i18next.changeLanguage(lang);
+      body.localize();
+
+      let langStorage = getTextLang();
+      setTextLang(langStorage);
+
+      if (langStorage === "ar") {
+        $("html").attr("dir", "rtl").addClass("arabic");
+      } else {
+        $("html").attr("dir", "").removeClass("arabic");
+      }
+
+      links.removeClass("active");
+
+      links.map(function () {
+        if ($(this).attr("data-lang") === lang) {
+          $(this).addClass("active");
+        }
+      });
+    });
+  }
+
+  handleLanguage();
 });
 
-$(window).on("resize", function () {});
+const handleLanguage = (lang) => {
+  let langStorage = getTextLang();
+  setTextLang(langStorage);
+
+  $(".lang-change").removeClass("active");
+
+  $(".lang-change").map(function () {
+    if ($(this).attr("data-lang") === langStorage) {
+      $(this).addClass("active");
+    }
+  });
+
+  if (langStorage === "en") {
+  } else {
+    console.log("2");
+  }
+};
+
+const getTextLang = () => {
+  return localStorage.getItem("i18nextLng");
+};
+
+const setTextLang = (lang) => {
+  $(".lang-block .lang").text(lang);
+};
