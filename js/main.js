@@ -1,3 +1,7 @@
+let observer = () => {
+  // для swiper destroy
+};
+
 $(document).ready(function () {
   if ($(".burger").length > 0) {
     let menu = $(".header-mobile");
@@ -92,41 +96,7 @@ $(document).ready(function () {
   }
 
   if ($(".reviews-slider").length > 0) {
-    const swiper = new Swiper(".reviews-slider", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1.25,
-          spaceBetween: 16,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1280: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        1680: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
+    initSliderReviews();
   }
 
   if ($(".code-list").length > 0) {
@@ -160,6 +130,8 @@ $(document).ready(function () {
       e.preventDefault();
       let lang = $(this).attr("data-lang");
 
+      observer(); // destroy swiper
+
       i18next.changeLanguage(lang);
       body.localize();
 
@@ -179,6 +151,8 @@ $(document).ready(function () {
           $(this).addClass("active");
         }
       });
+
+      initSliderReviews();
     });
   }
 
@@ -232,4 +206,46 @@ const getTextLang = () => {
 
 const setTextLang = (lang) => {
   $(".lang-block .lang").text(lang);
+};
+
+const initSliderReviews = () => {
+  const swiper = new Swiper(".reviews-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1280: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1680: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  observer = () => {
+    swiper.destroy(true, true);
+  };
 };
