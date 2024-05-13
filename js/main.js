@@ -117,6 +117,14 @@ $(document).ready(function () {
           slidesPerView: 3,
           spaceBetween: 30,
         },
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1680: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
       },
     });
   }
@@ -171,6 +179,19 @@ $(document).ready(function () {
           $(this).addClass("active");
         }
       });
+    });
+  }
+
+  if ($(".code-list a").length > 0) {
+    $(".code-list a").on("click", function (event) {
+      event.preventDefault();
+      let img = $(this).find("img").attr("src");
+      let code = $(this).attr("data-code");
+
+      $(".phone-item__phone .flag-main").attr("src", img);
+      $(".phone-item__phone .code").text(code);
+
+      $(".input-phone-code").val(code);
     });
   }
 

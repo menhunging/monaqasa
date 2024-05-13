@@ -221,16 +221,6 @@
     line-height: 14px;
   }
 
-  .phone-item__phone {
-    display: none;
-  }
-
-  .phone-item {
-    input {
-      padding-left: 20px;
-    }
-  }
-
   .input-item {
     label {
       display: none;
@@ -278,5 +268,16 @@
     .lines {
       display: none;
     }
+  }
+
+  .phone-item__phone {
+    font-size: 12px;
+    line-height: 18px;
+    gap: 8px;
+    min-width: 95px;
+  }
+
+  .phone-item input {
+    padding-left: 110px;
   }
 }

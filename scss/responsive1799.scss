@@ -4,3 +4,19 @@
 @media (max-width: 1799px) {
 }
 
+@media (max-width: 1679px) {
+  .reviews-slider .swiper-slide::before {
+    width: 492px;
+    height: 305px;
+    z-index: -1;
+    left: -20px;
+    top: -16px;
+    background-size: contain;
+  }
+
+  .reviews-slider {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

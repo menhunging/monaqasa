@@ -435,13 +435,28 @@
                             <input type="text" data-i18n="[placeholder]placeHolderPhone"
                                 placeholder="Your phone number">
                             <div class="phone-item__phone">
-                                <img class="flag" src="img/falg1.webp" alt="" />
+                                <img class="flag flag-main" src="img/flag1.webp" alt="" />
                                 <span class="code">+966</span>
                                 <div class="code-list">
                                     <ul class="code-list__list">
-                                        <li><a href="#">+966</a></li>
-                                        <li><a href="#">+966</a></li>
-                                        <li><a href="#">+966</a></li>
+                                        <li>
+                                            <a href="#" data-code="+966">
+                                                <img class="flag" src="img/flag1.webp" alt="" />
+                                                <span class="code-list__code">+966</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-code="+123">
+                                                <img class="flag" src="img/flag2.webp" alt="" />
+                                                <span class="code-list__code">+123</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-code="+966">
+                                                <img class="flag" src="img/flag1.webp" alt="" />
+                                                <span class="code-list__code">+966</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
 
@@ -460,6 +475,7 @@
                             <button type="submit" class="btn btn--green" data-modal="modal-success"
                                 data-i18n="btns.send">Send</button>
                         </div>
+                        <input type="text" class="input-phone-code" value="+966" hidden>
                     </form>
                     <div class="contacts-info">
                         <ul>

@@ -522,7 +522,8 @@
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100%;
+  width: calc(100% + 15px);
+  left: -15px;
   z-index: 3;
   padding-top: 15px;
   transform-origin: top;
@@ -538,11 +539,16 @@
     background-color: $colorWhite;
     border-radius: 20px;
     overflow: hidden;
+
+    li {
+    }
   }
 
   a {
     padding: 10px 15px;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
     &:hover {
       background-color: $colorGreen;
