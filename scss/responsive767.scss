@@ -332,4 +332,12 @@
   .advantages__list::before {
     display: none;
   }
+
+  .input-item__error {
+    font-size: 12px;
+    line-height: 17px;
+    bottom: 11px;
+    right: 17px;
+    padding-left: 20px;
+  }
 }

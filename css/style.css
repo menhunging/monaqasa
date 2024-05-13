@@ -300,11 +300,18 @@ input {
   padding: 12px 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 0px rgba(57, 59, 58, 0.2);
+  border: solid 1px transparent;
 }
 .input-item input::placeholder, .input-item textarea::placeholder {
   opacity: 1;
   text-transform: none;
   color: rgba(0, 0, 0, 0.48);
+}
+.input-item.error input {
+  border-color: rgb(255, 128, 128);
+}
+.input-item.error .input-item__error {
+  display: block;
 }
 .input-item label {
   font-size: 12px;
@@ -1634,6 +1641,22 @@ h3,
   text-align: center;
 }
 
+.input-item__error {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_99_78)'%3e%3cpath d='M8.00016 14.6667C11.6821 14.6667 14.6668 11.6819 14.6668 8.00004C14.6668 4.31814 11.6821 1.33337 8.00016 1.33337C4.31826 1.33337 1.3335 4.31814 1.3335 8.00004C1.3335 11.6819 4.31826 14.6667 8.00016 14.6667Z' stroke='%23FF8080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M8.00024 5.33337V8.00004' stroke='%23FF8080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M8.00024 10.6667H8.00691' stroke='%23FF8080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_99_78'%3e%3crect width='16' height='16' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+  min-height: 16px;
+  padding-left: 26px;
+  color: rgb(255, 128, 128);
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  display: none;
+}
+
 @media (min-width: 1280px) {
   .menu {
     display: block !important;
@@ -2324,6 +2347,10 @@ h3,
     right: calc(50% - 283px);
     height: 77px;
   }
+  .input-item__error {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -2589,6 +2616,13 @@ h3,
   }
   .advantages__list::before {
     display: none;
+  }
+  .input-item__error {
+    font-size: 12px;
+    line-height: 17px;
+    bottom: 11px;
+    right: 17px;
+    padding-left: 20px;
   }
 }
 @media (max-width: 479px) {
