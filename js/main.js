@@ -45,17 +45,17 @@ $(document).ready(function () {
     $(".thisYear").text(date.getFullYear());
   }
 
-  if ($(".phone-item").length > 0) {
-    $(".phone-item input").map(function () {
-      $(this).inputmask({
-        mask: "999 99 99",
-        placeholder: "*",
-        showMaskOnHover: false,
-        showMaskOnFocus: true,
-        clearIncomplete: true,
-      });
-    });
-  }
+  // if ($(".phone-item").length > 0) {
+  //   $(".phone-item input").map(function () {
+  //     $(this).inputmask({
+  //       mask: "999 999 99 99 99",
+  //       placeholder: "*",
+  //       showMaskOnHover: false,
+  //       showMaskOnFocus: true,
+  //       clearIncomplete: true,
+  //     });
+  //   });
+  // }
 
   if ($(".modal").length > 0) {
     MicroModal.init({

@@ -95,6 +95,7 @@ const en = {
   placeHolderEmail: "Your E-mail",
   placeHolderPhone: "Your phone number",
   placeHolderMessage: "Your message...",
+  errorInput: "Field is required",
 };
 
 const ar = {
@@ -194,4 +195,5 @@ const ar = {
   placeHolderEmail: "بريدك الالكتروني",
   placeHolderPhone: "رقم تليفونك",
   placeHolderMessage: "رسالتك...",
+  errorInput: "الحقل مطلوب",
 };

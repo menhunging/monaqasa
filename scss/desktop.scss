@@ -27,6 +27,10 @@
   gap: 30px;
   align-items: flex-start;
   padding-bottom: 82px;
+
+  .btn {
+    z-index: 2;
+  }
 }
 
 .grettings__picture {
