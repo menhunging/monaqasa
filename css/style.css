@@ -2683,6 +2683,14 @@ h3,
 .arabic .swiper-button-next {
   transform: scale(-1, 1) translateY(-50%);
 }
+.arabic .swiper-rtl .swiper-button-prev {
+  left: auto;
+  right: -92px;
+}
+.arabic .swiper-rtl .swiper-button-next {
+  left: -92px;
+  right: auto;
+}
 .arabic .phone-item__phone {
   left: auto;
   right: 21px;
@@ -2730,6 +2738,12 @@ h3,
   .arabic .reviews-slider__body::before {
     right: 0;
     left: auto;
+  }
+  .arabic .swiper-rtl .swiper-button-prev {
+    right: -50px;
+  }
+  .arabic .swiper-rtl .swiper-button-next {
+    left: -50px;
   }
 }
 @media (max-width: 1023px) {

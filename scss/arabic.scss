@@ -32,6 +32,15 @@
     transform: scale(-1, 1) translateY(-50%);
   }
 
+  .swiper-rtl .swiper-button-prev {
+    left: auto;
+    right: -92px;
+  }
+  .swiper-rtl .swiper-button-next {
+    left: -92px;
+    right: auto;
+  }
+
   .phone-item__phone {
     left: auto;
     right: 21px;
@@ -67,9 +76,9 @@
     left: auto;
   }
 
-  .input-item__error{
+  .input-item__error {
     right: auto;
-    left:20px;
+    left: 20px;
     background-position: right center;
     padding-left: 0;
     padding-right: 26px;
@@ -92,6 +101,13 @@
     .reviews-slider__body::before {
       right: 0;
       left: auto;
+    }
+
+    .swiper-rtl .swiper-button-prev {
+      right: -50px;
+    }
+    .swiper-rtl .swiper-button-next {
+      left: -50px;
     }
   }
 
